@@ -24,6 +24,7 @@ server.use(express.json());
 server.use(CORS());
 server.use(session(sessionConfig));
 
+server.use('/api/characters', characterRouter);
 
 server.get('/', (req, res ) => {
     res.json({ server: "running"})
